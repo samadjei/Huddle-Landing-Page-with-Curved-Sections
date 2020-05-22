@@ -1,0 +1,88 @@
+section .bg-top {
+  margin-bottom: -1rem;
+  @include breakpoint(medium) {
+    display: none;
+  }
+}
+.mb-top {
+  display: none;
+  @include breakpoint(medium) {
+    display: block;
+  }
+}
+
+.bg-bottom {
+  @include breakpoint(medium) {
+    display: none;
+  }
+}
+
+.mb-bottom {
+  display: none;
+  @include breakpoint(medium) {
+    display: block;
+  }
+}
+
+.curved {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  justify-content: center;
+  align-items: center;
+  grid-gap: 4rem;
+
+  &__text {
+    max-width: 52rem;
+    margin: auto;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 49rem;
+    margin: auto;
+  }
+
+  @include breakpoint(medium) {
+    &__text {
+      grid-row: 2 / 3;
+      text-align: center;
+    }
+    grid-gap: 6rem;
+    &__img {
+      grid-column: 1 / 2;
+      text-align: center;
+    }
+  }
+}
+
+.bg-section-1,
+.bg-section-2 {
+  padding-top: 6rem;
+  background: $Very-Pale-Blue;
+}
+
+.conversation {
+  margin-bottom: 7rem;
+  margin-top: 10rem;
+}
+
+.community {
+  text-align: center;
+  margin-top: 14rem;
+  margin-bottom: 14rem;
+
+  @include breakpoint(medium) {
+    h3 {
+      font-size: 3rem;
+    }
+  }
+}
+
+.cta.communityBtn {
+  padding: 1.5rem 7rem;
+  margin-top: 2rem;
+
+  @include breakpoint(medium) {
+    margin-top: 4rem;
+  }
+}

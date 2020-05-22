@@ -1,0 +1,38 @@
+.mockup {
+  margin: 0 auto;
+  max-width: 100%;
+  margin-bottom: 15rem;
+  width: 100rem;
+
+  @include breakpoint(medium) {
+    margin-bottom: 0rem;
+  }
+  &__img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 12rem;
+  }
+
+  &__numbers {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    @include breakpoint(medium) {
+      flex-direction: column;
+      align-items: center;
+    }
+    div {
+      &:first-child {
+        padding-bottom: 10rem;
+      }
+
+      h2 {
+        font-size: 8rem;
+      }
+
+      p {
+        color: gray;
+      }
+    }
+  }
+}

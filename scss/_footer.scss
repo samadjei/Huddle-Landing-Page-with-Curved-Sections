@@ -1,0 +1,90 @@
+.footer {
+  color: #fff;
+
+  &__top {
+    margin-bottom: -1rem;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    justify-content: center;
+    align-items: center;
+    grid-gap: 4rem;
+  }
+
+  &__left {
+    max-width: 35rem;
+    display: grid;
+    grid-row-gap: 2rem;
+    @include breakpoint(medium) {
+      grid-row: 2/ 3;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    h4 {
+      text-transform: uppercase;
+      font-size: 2rem;
+      padding-bottom: 1.5rem;
+    }
+    p {
+      font-size: 1.5rem;
+      padding-bottom: 3rem;
+      max-width: 35rem;
+    }
+    @include breakpoint(medium) {
+      grid-row: 1/ 2;
+    }
+  }
+
+  &__socials {
+    padding-top: 3rem;
+    ul {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      li:nth-child(2) {
+        padding: 0 2rem;
+      }
+    }
+  }
+}
+
+.container {
+  padding-bottom: 10rem;
+}
+
+.bg-footer {
+  background: $Very-Dark-Cyan;
+  padding-top: 8rem;
+}
+
+.footer__logo {
+  filter: brightness(0) invert(1);
+  width: 25rem;
+}
+
+input {
+  outline: none;
+  border: none;
+  padding: 1rem;
+  margin-right: 2rem;
+  border-radius: 0.5rem;
+  width: 35rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.9rem 3rem;
+  border: none;
+  color: #fff;
+  background: $Pink;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+  @include breakpoint(small) {
+    margin-left: 22rem;
+  }
+}
